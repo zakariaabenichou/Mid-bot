@@ -1,5 +1,4 @@
-require('dotenv').config(); // لازم يكون فالأول
-
+require('dotenv').config(); 
 const { chromium } = require('playwright');
 
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
@@ -28,9 +27,7 @@ const MAKE_WEBHOOK_URL = process.env.MAKE_WEBHOOK_URL;
   console.log(`Navigating to Discord channel: ${SERVER_ID}/${CHANNEL_ID}`);
   await page.goto(`https://discord.com/channels/${SERVER_ID}/${CHANNEL_ID}`);
 
-  // ... باقي كودك كما هو
-
-  // وأخيراً فاش تبغي تبعت للصناعة لـ Make.com:
+  
   try {
     const response = await fetch(MAKE_WEBHOOK_URL, {
       method: 'POST',
